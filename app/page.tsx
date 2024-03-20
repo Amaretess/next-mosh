@@ -1,10 +1,11 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import ProductCard from './components/ProductCard'
+import Layout from './components/layout'
 
 const Home = () => {
   return (
-    <div>
+    <Layout>
       <NavBar />
       <main>
         <h1>Welcome to the Dashboard</h1>
@@ -12,7 +13,7 @@ const Home = () => {
           <ProductCard />
         </div>
       </main>
-    </div>
+    </Layout>
   )
 }
 
