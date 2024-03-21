@@ -6,7 +6,7 @@ type data = {
     description: string;
 }
 
-const ProductCard = (passedData: data) => {
+const ToDoCard = (passedData: data) => {
     return (
         <div className="card">
             <img src="#" className="card-img-top" />
@@ -20,4 +20,4 @@ const ProductCard = (passedData: data) => {
     )
 }
 
-export default ProductCard
+export default ToDoCard
