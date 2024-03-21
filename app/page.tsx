@@ -1,19 +1,14 @@
 import React from 'react'
 import NavBar from './components/NavBar'
-import ToDoCard from './components/ToDoCard'
+import ToDoCard, { ToDo } from './components/ToDoCard'
 import Layout from './components/layout'
 
-interface toDo {
-  id: number;
-  title: string;
-  completed: string;
-}
 
 const Home = async () => {
   // :) const cardArray = [{ title: "Testing", description: "Testing1 description" }, { title: "Testing2", description: "Testing1 description" }];
 
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-  const toDo: toDo[] = await res.json();
+  const toDo: ToDo[] = await res.json();
 
 
   return (
