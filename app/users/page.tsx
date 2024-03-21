@@ -14,7 +14,7 @@ const UsersPage = async () => {
         <div>
             <h1>User Page</h1>
             <ul>
-                {users.map((user: User) => (
+                {users.map((user) => (
                     <li key={user.id} >{user.name}</li>
                 ))}
             </ul>
