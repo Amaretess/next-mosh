@@ -1,25 +1,22 @@
-import React from 'react'
+import { getUsers } from '../hooks/getUsers';
+import Card from '../components/Card';
 
-interface User {
-    id: number;
-    name: string;
-}
 
-const UsersPage = async () => {
+const UsersPage = () => {
 
-    const res = await fetch("https://jsonplaceholder.typicode.com/users")
-    const users: User[] = await res.json();
+    const { users } = getUsers();
+
 
     return (
         <div>
             <h1>User Page</h1>
             <ul>
                 {users.map((user) => (
-                    <li key={user.id} >{user.name}</li>
+                    <Card key={user.id} title={user.name} />
                 ))}
             </ul>
         </div>
     )
 }
 
-export default UsersPage
+export default UsersPage;

@@ -1,18 +1,25 @@
 import React from 'react'
-import Button from './Button'
 import Card from './Card';
 
+export interface ToDos {
+    toDos: ToDo[];
+}
 export interface ToDo {
     id: number;
     title: string;
-    completed: string;
+    completed: boolean;
 }
 
 
-const ToDoCard = (props: ToDo) => {
+const ToDoCard = ({ toDos }: ToDos) => {
+
     return (
-        <Card passedData={ } />
+        <>
+            {toDos.map((todo) => (
+                <Card title={todo.title} description={todo.completed} />
+            ))}
+        </>
     )
 }
 
-export default ToDoCard
+export default ToDoCard;
