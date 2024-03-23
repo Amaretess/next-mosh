@@ -1,4 +1,4 @@
-'use client'
+"use-client"
 import { useEffect, useState } from "react"
 import userService from "../services/user-service";
 import { CanceledError } from "axios";
@@ -8,7 +8,7 @@ export interface User {
     name: string;
 }
 
-export const getUsers = () => {
+const getUsers = () => {
     const [users, setUsers] = useState<User[]>([])
 
     useEffect(() => {

@@ -1,5 +1,6 @@
-import { getUsers } from '../hooks/getUsers';
+"use-client"
 import Card from '../components/Card';
+import getUsers from '../hooks/getUsers';
 
 
 const UsersPage = () => {
